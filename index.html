@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Autono’Vie – Association</title>
+<style>
+:root{--bg:#fbf8f3;--card:#fff;--text:#24303a;--muted:#5c6b77;--accent:#2f7d6d;--accent2:#e8a33d;--line:#e6e0d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161c20;--card:#1f272d;--text:#eef2f4;--muted:#a3b1ba;--accent:#5cc2ad;--accent2:#f0b85a;--line:#2f3a42}}
+:root[data-theme="dark"]{--bg:#161c20;--card:#1f272d;--text:#eef2f4;--muted:#a3b1ba;--accent:#5cc2ad;--accent2:#f0b85a;--line:#2f3a42}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+h1,h2,h3,nav,button,.btn{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:1.3rem;color:var(--accent);font-family:system-ui,sans-serif}
+nav a{margin-left:14px;color:var(--text);text-decoration:none;font-size:.95rem}
+section{max-width:860px;margin:0 auto;padding:36px 20px}
+.hero{text-align:center;padding-top:56px}
+.hero h1{font-size:2.3rem;margin:0 0 12px}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:560px;margin:0 auto 24px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:600;border:0;font-size:1rem}
+h2{font-size:1.6rem;margin:0 0 16px;border-left:5px solid var(--accent2);padding-left:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin:0 0 6px;color:var(--accent)}
+.card p{margin:0;color:var(--muted)}
+label{display:block;margin:10px 0 4px;font-family:system-ui,sans-serif;font-size:.9rem}
+input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font:inherit}
+footer{text-align:center;color:var(--muted);padding:28px 20px;border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Autono’Vie</div>
+  <nav><a href="#mission">Mission</a><a href="#actions">Actions</a><a href="#agenda">Agenda</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero">
+  <h1>Bien vieillir chez soi, entouré et accompagné</h1>
+  <p>Autono’Vie aide les personnes âgées en perte d’autonomie dans les actes de la vie quotidienne, avec bienveillance et respect.</p>
+  <a class="btn" href="#contact">Demander de l’aide ou devenir bénévole</a>
+</section>
+
+<section id="mission">
+  <h2>Notre mission</h2>
+  <p>Autono’Vie est une association qui favorise et soutient les personnes âgées en perte d’autonomie. Nous les aidons au quotidien pour qu’elles conservent leur indépendance, leur dignité et leur place dans la vie sociale. De petits gestes, partagés ensemble, changent concrètement la vie de chacun.</p>
+</section>
+
+<section id="actions">
+  <h2>Nos actions</h2>
+  <div class="grid">
+    <div class="card"><h3>Aider au quotidien</h3><p>Courses, repas, déplacements, ménage léger et petites démarches.</p></div>
+    <div class="card"><h3>Accompagner</h3><p>Une présence et une écoute pour rompre l’isolement.</p></div>
+    <div class="card"><h3>Informer</h3><p>Orientation vers les aides et services adaptés, pour la personne et ses proches.</p></div>
+  </div>
+</section>
+
+<section id="agenda">
+  <h2>Agenda</h2>
+  <div class="grid">
+    <div class="card"><h3>Date à venir</h3><p>Permanence d’accueil et d’information – lieu à préciser</p></div>
+    <div class="card"><h3>Date à venir</h3><p>Après-midi convivial avec les bénévoles – lieu à préciser</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact, aide et bénévolat</h2>
+  <div class="card">
+    <form id="cf" action="https://formspree.io/f/xqpqplvj" method="POST">
+    <label for="n">Nom</label><input id="n" name="nom" type="text" required>
+    <label for="e">E-mail</label><input id="e" name="email" type="email" required>
+    <label for="m">Message</label><textarea id="m" name="message" rows="4" required></textarea>
+    <p style="margin-top:14px"><button class="btn" type="submit">Envoyer</button></p>
+    <p id="ok" role="status" style="display:none;color:var(--accent)">Merci ! Votre message a bien été envoyé.</p>
+    <p style="font-size:.85rem;color:var(--muted)">Les informations saisies servent uniquement à répondre à votre demande.</p>
+    </form>
+  </div>
+</section>
+
+<section id="mentions">
+  <h2>Mentions légales</h2>
+  <div class="card">
+    <p><strong>Éditeur du site :</strong> association Autono’Vie, association loi 1901<br>
+    <strong>Siège social :</strong> 25 rue la Carrère, Maslacq<br>
+    <strong>N° RNA / SIREN :</strong> [à compléter]<br>
+    <strong>Responsable de la publication :</strong> Justin Laffargue<br>
+    <strong>Contact :</strong> justin.laffargue@proton.me<br>
+    <strong>Hébergeur :</strong> [nom, adresse et site de l’hébergeur choisi]</p>
+    <p style="margin-top:12px"><strong>Données personnelles :</strong> les informations saisies dans le formulaire de contact sont utilisées uniquement pour répondre aux demandes et gérer les adhésions et le bénévolat. Elles ne sont pas transmises à des tiers. Conformément au RGPD, vous pouvez demander l’accès, la rectification ou la suppression de vos données en écrivant à justin.laffargue@proton.me.</p>
+    <p style="margin-top:12px"><strong>Propriété intellectuelle :</strong> les textes et images de ce site sont la propriété de l’association, sauf mention contraire.</p>
+  </div>
+</section>
+
+<footer>© 2026 Autono’Vie – Association · <a href="#mentions" style="color:inherit">Mentions légales</a></footer>
+<script>
+var f=document.getElementById('cf');
+f.addEventListener('submit',function(e){e.preventDefault();
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+.then(function(r){if(r.ok){f.reset();document.getElementById('ok').style.display='block';}else{f.submit();}})
+.catch(function(){f.submit();});});
+</script>
+</body>
+</html>
